@@ -1,1 +1,368 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fidelis Wellness | Wellness & Nutrition Products in Kenya</title>
+
+  <meta name="description"
+        content="Shop quality wellness and nutrition products from Fidelis Wellness. Browse our collection and order conveniently through WhatsApp in Kenya.">
+
+  <meta name="keywords"
+        content="wellness products Kenya, nutrition products Kenya, health products Kenya, Fidelis Wellness">
+
+  <meta name="author" content="Fidelis Wellness">
+
+  <meta property="og:title" content="Fidelis Wellness">
+  <meta property="og:description"
+        content="Wellness. Nutrition. Better Living.">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://fideliswellness.co.ke/">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="container nav-container">
+
+    <a href="#" class="logo">
+      <span class="logo-mark">F</span>
+      <span>
+        <strong>FIDELIS</strong>
+        <small>WELLNESS</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" onclick="openCart()">
+      Cart
+      <span id="cartCount">0</span>
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content container">
+
+    <div class="hero-copy">
+
+      <p class="eyebrow">WELLNESS • NUTRITION • BETTER LIVING</p>
+
+      <h1>
+        Make wellness
+        <span>part of your everyday.</span>
+      </h1>
+
+      <p class="hero-text">
+        Discover carefully selected wellness and nutrition products
+        designed to support a healthier lifestyle.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-primary">
+          Explore Products
+        </a>
+
+        <a href="#about" class="btn btn-secondary">
+          Our Story
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+
+      <div class="hero-circle"></div>
+
+      <div class="hero-card">
+        <span>F</span>
+      </div>
+
+      <div class="floating-label">
+        <small>FIDELIS</small>
+        <strong>WELLNESS</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRUST BAR -->
+
+<section class="trust-bar">
+
+  <div class="container trust-grid">
+
+    <div>
+      <strong>Quality Focused</strong>
+      <span>Products selected with care</span>
+    </div>
+
+    <div>
+      <strong>Easy Ordering</strong>
+      <span>Order directly through WhatsApp</span>
+    </div>
+
+    <div>
+      <strong>Kenya</strong>
+      <span>Serving customers across Kenya</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+        <p class="eyebrow">EXPLORE</p>
+        <h2>Shop by category</h2>
+      </div>
+
+      <p>
+        Find products that fit your wellness journey.
+      </p>
+
+    </div>
+
+    <div class="category-grid">
+
+      <button onclick="filterProducts('nutrition')">
+        <span>01</span>
+        <strong>Nutrition</strong>
+        <small>Daily nutritional support</small>
+      </button>
+
+      <button onclick="filterProducts('supplements')">
+        <span>02</span>
+        <strong>Supplements</strong>
+        <small>Wellness-focused products</small>
+      </button>
+
+      <button onclick="filterProducts('personal-care')">
+        <span>03</span>
+        <strong>Personal Care</strong>
+        <small>Everyday personal wellness</small>
+      </button>
+
+      <button onclick="filterProducts('household')">
+        <span>04</span>
+        <strong>Household</strong>
+        <small>Products for your home</small>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="section shop-section" id="shop">
+
+  <div class="container">
+
+    <div class="shop-header">
+
+      <div>
+        <p class="eyebrow">OUR COLLECTION</p>
+        <h2>Featured products</h2>
+      </div>
+
+      <div class="shop-tools">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products..."
+          oninput="searchProducts()"
+        >
+
+        <select id="categoryFilter" onchange="filterProducts(this.value)">
+
+          <option value="all">All products</option>
+          <option value="nutrition">Nutrition</option>
+          <option value="supplements">Supplements</option>
+          <option value="personal-care">Personal Care</option>
+          <option value="household">Household</option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about-section" id="about">
+
+  <div class="container about-grid">
+
+    <div>
+
+      <p class="eyebrow">ABOUT FIDELIS</p>
+
+      <h2>
+        Wellness should feel
+        <span>simple.</span>
+      </h2>
+
+    </div>
+
+    <div>
+
+      <p>
+        Fidelis Wellness exists to make quality wellness and nutrition
+        products easier to discover and order in Kenya.
+      </p>
+
+      <p>
+        We believe better living starts with informed choices,
+        consistency and taking care of yourself every day.
+      </p>
+
+      <a href="#shop" class="text-link">
+        Explore our products →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section" id="contact">
+
+  <div class="container cta-inner">
+
+    <div>
+
+      <p class="eyebrow">READY TO ORDER?</p>
+
+      <h2>Let's make your next wellness choice simple.</h2>
+
+    </div>
+
+    <a
+      href="https://wa.me/254700000000"
+      class="btn btn-light"
+      target="_blank"
+    >
+      Chat on WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- CART DRAWER -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+  <div class="cart-header">
+
+    <h3>Your Cart</h3>
+
+    <button onclick="closeCart()">×</button>
+
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-footer">
+
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">KSh 0</strong>
+    </div>
+
+    <button class="checkout-button" onclick="checkoutWhatsApp()">
+      Checkout via WhatsApp
+    </button>
+
+  </div>
+
+</aside>
+
+
+<!-- MOBILE NAV -->
+
+<nav class="mobile-nav">
+
+  <a href="#">
+    <span>Home</span>
+  </a>
+
+  <a href="#shop">
+    <span>Shop</span>
+  </a>
+
+  <button onclick="openCart()">
+    <span>Cart</span>
+    <b id="mobileCartCount">0</b>
+  </button>
+
+  <a href="#about">
+    <span>About</span>
+  </a>
+
+</nav>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
