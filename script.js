@@ -10,7 +10,7 @@ const products = [
     id: "NL001",
     name: "NeoLifeShake",
     category: "nutrition",
-    price: 0,
+    price: 4500,
     image: "images/products/neolifeshake.jpg",
     description: "A convenient nutrition shake designed to complement a balanced lifestyle."
   },
